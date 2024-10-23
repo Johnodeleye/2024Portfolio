@@ -3,6 +3,10 @@ import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+import Image from "next/image";
+import SectionHeader from "@/components/SectionHeader";
+import grainImage from '@/assets/images/grain.jpg';
+import Card from "@/components/Card";
 
 const testimonials = [
   {
@@ -38,5 +42,39 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
-  return <div>Testimonials Section</div>;
+  return (
+    <div className="py-16 lg:py-24">
+      <div className="container">
+        {/**container makes content to be fit in the screen i.e it makes the contnet not to be too be in the edge of the screen */}
+      <SectionHeader 
+      eyebrow="Happy Clients"
+      title="What Clients Say about Me"
+      description="Don't just take my word for it. See what my client have to say about my work."
+      />
+      <div className="mt-16 lg:mt-24 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        {/** THis overflow makes the screen not be moving around it make it stick to the screen */}
+        <div className="flex gap-8 flex-none">
+        {testimonials.map(testimony =>(
+          <Card key={testimony.name} className="max-w-xs p-6 md:p-8 md:max-w-md">
+            <div className="flex gap-4 items-center">
+            <div className="absolute inset-0 opacity-5 -z-10" 
+            style={{
+              backgroundImage: `url(${grainImage.src})`,
+            }}></div>
+            <div className="size-14 bg-gray-700 inline-flex rounded-full items-center justify-center flex-shrink-0">
+            <Image src={testimony.avatar} alt={testimony.name} className="max-h-full"/>
+            </div>
+            <div>
+            <div className="font-semibold">{testimony.name}</div>
+            <div className="text-sm text-white/40">{testimony.position}</div>
+            </div>
+            </div>
+            <p className="mt-4 md:mt-6 text-sm md:text-base">{testimony.text}</p>
+          </Card>
+        ))}
+        </div>
+      </div>
+    </div>
+    </div>
+  )
 };

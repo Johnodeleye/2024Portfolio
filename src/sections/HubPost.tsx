@@ -1,8 +1,8 @@
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import grainImage from '@/assets/images/grain.jpg';
-export const ContactSection = () => {
+export const HubPostSection = () => {
   return (
-  <div className='py-16 pt-12 lg:py-24 lg:pt-20'>
+  <div className='py-16 pt-2 lg:py-24 lg:pt-0'>
     <div className='container'> {/**The container makes it comes to the center of the screen */}
     <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 
     px-10 rounded-3xl text-center relative overflow-hidden z-0 md:text-left">
@@ -19,7 +19,7 @@ export const ContactSection = () => {
     </div>
     <div>
     <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border-gray-950">
-      <span className='font-semibold'>Contact Me</span>
+      <span className='font-semibold'>Join HubPost For Free!</span>
       <ArrowUpRightIcon className='size-4'/>
       </button>
       </div>
