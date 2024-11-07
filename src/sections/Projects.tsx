@@ -6,6 +6,7 @@ import CheckCircleIcon from '@/assets/icons/check-circle.svg'
 import ArrowUp from '@/assets/icons/arrow-up-right.svg'
 import grainImage from '@/assets/images/grain.jpg'
 import SectionHeader from "@/components/SectionHeader";
+import church from '@/assets/images/daVID lAND.jpg'
 import Card from "@/components/Card";
 const portfolioProjects = [
   {
@@ -29,20 +30,20 @@ const portfolioProjects = [
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "",
     image: porthome,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Church Page",
+    year: "2024",
+    title: "Rccg David's pavilion Page",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: Todo,
+    link: "https://davidpavilion.onrender.com",
+    image: church,
   },
 ];
 

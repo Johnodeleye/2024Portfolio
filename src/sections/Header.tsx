@@ -15,8 +15,8 @@ export const Header = () => {
       <Link href={'#about'} className="nav-item cursor-pointer">
       About
       </Link>
-      <Link href={'#contact'} className="nav-item cursor-pointer bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900">
-      Contact
+      <Link href={'https://hubpost-app.vercel.app/authors/johnayomide920@gmail.com'} className="nav-item cursor-pointer bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900">
+      Blog
       </Link>
     </nav>
   </div>
