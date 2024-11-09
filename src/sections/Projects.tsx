@@ -58,8 +58,11 @@ export const ProjectsSection = () => {
           description="See how i transformed concepts into engaging digital experiences."
           />
         <div className="md:mt-20 mt-10 gap-20 flex flex-col">
-          {portfolioProjects.map(project => (
-            <Card key={project.title} className="px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 pb-0">
+          {portfolioProjects.map((project, projectIndex) => (
+            <Card key={project.title} className="px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 pb-0 sticky"
+            style={{
+              top: `calc(64px + ${projectIndex * 40}px`
+            }}>
               <div className="absolute inset-0 -z-10 opacity-5" 
               style={{
                 backgroundImage: `url(${grainImage.src})`,

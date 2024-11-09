@@ -68,9 +68,12 @@ export const HeroSection = () => {
     <div className="container">
       <div className='flex flex-col items-center'>
       <Image 
-      src={memojiImage} 
-      className='size-[100px]' 
-      alt='Perspicacious Avatar'/>
+      src={'/devlogo.jpg'} 
+      className='size-[100px] rounded-full object-contain' 
+      alt='Perspicacious Avatar'
+      width={70} height={70}
+
+      />
       <div className='bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
         <div className='bg-green-500 size-2.5 rounded-full relative'>
           <div className="bg-green-500 absolute inset-0 animate-ping-large rounded-full"></div>

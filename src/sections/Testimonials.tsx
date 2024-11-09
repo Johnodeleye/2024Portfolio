@@ -7,6 +7,7 @@ import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import grainImage from '@/assets/images/grain.jpg';
 import Card from "@/components/Card";
+import { Fragment } from "react";
 
 const testimonials = [
   {
@@ -30,8 +31,8 @@ const testimonials = [
   {
     name: "Micheal Oluwasegun",
     position: "Product Manager @ TermTech",
-    text: "John is a true developer wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
-    avatar: memojiAvatar4,
+    text: "John is a true Software developer wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
+    avatar: memojiAvatar1,
   },
   {
     name: "Tobi Saliu",
@@ -51,11 +52,14 @@ export const TestimonialsSection = () => {
       title="What Clients Say about Me"
       description="Don't just take my word for it. See what my client have to say about my work."
       />
-      <div className="mt-16 lg:mt-24 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+      <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
         {/** THis overflow makes the screen not be moving around it make it stick to the screen */}
-        <div className="flex gap-8 flex-none">
+        <div className="flex gap-8 flex-none pr-8 animate-move-left [animation-duration:90s] 
+        hover:[animation-play-state:paused]">
+          {[...new Array(2)].fill(0).map((_, index)=>(
+            <Fragment key={index}>
         {testimonials.map(testimony =>(
-          <Card key={testimony.name} className="max-w-xs p-6 md:p-8 md:max-w-md">
+          <Card key={testimony.name} className="max-w-xs p-6 md:p-8 md:max-w-md hover:-rotate-3 transition duration-300">
             <div className="flex gap-4 items-center">
             <div className="absolute inset-0 opacity-5 -z-10" 
             style={{
@@ -72,6 +76,8 @@ export const TestimonialsSection = () => {
             <p className="mt-4 md:mt-6 text-sm md:text-base">{testimony.text}</p>
           </Card>
         ))}
+          </Fragment>
+          ))}
         </div>
       </div>
     </div>

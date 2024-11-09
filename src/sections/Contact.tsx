@@ -34,8 +34,10 @@ export const ContactSection = () => {
       //   icon: "success"
       // });
     //   sendEmail();
-    console.log('Sent email');
+    console.log('Message Sent');
     
+    }else{
+      console.log('error', Error)
     }
   }
 
@@ -63,15 +65,15 @@ export const ContactSection = () => {
 
             {/* Popup content */}
             {showPopup && (
-        <div className="fixed z-[90] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-11 mx-auto bg-black shadow-lg shadow-green-600 rounded-md shadow-outline  ">
-          <div className="flex justify-center items-center text-center mb-4 z-50 gap-9">
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-11 mx-auto bg-black shadow-lg shadow-green-600 rounded-md shadow-outline">
+          <div className="flex justify-center items-center text-center mb-4 z-50 gap-9 relative">
             <h1 className="font-bold text-green-400">Contact Me</h1>
 
             <button className="text-red-600 font-bold lg:ml-4 tooltip" onClick={() => setShowPopup(false)}>
               ❌
             </button>
           </div>
-          <p className="text-sm text-ellipsis text-gray-600 mb-4">Let's Discuss Your next Project and Bring it to Life😎😍</p>
+          <p className="text-sm text-ellipsis text-gray-600 mb-4">Let'&copy;s Discuss Your next Project and Bring it to Life😎😍</p>
           <form className="flex flex-col gap-2" onSubmit={onsubmit}>
             <input required type="text" name="name" className="border rounded-md p-2 bg-dark-4 lg:w-full sm:w-11/12" placeholder="Enter your name" id="name" />
             <input required type="email" name="email" className="border rounded-md p-2 bg-dark-4 lg:w-full sm:w-11/12" placeholder="Enter your email" id="email" />
