@@ -2,6 +2,7 @@
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import grainImage from '@/assets/images/grain.jpg';
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 export const ContactSection = () => {
 
   const [showPopup, setShowPopup] = useState(false);
@@ -28,11 +29,11 @@ export const ContactSection = () => {
     });
     const result = await response.json();
     if (result.success) {
-      // Swal.fire({
-      //   title: "Success!",
-      //   text: "Thank you for your message, we'll get back to you",
-      //   icon: "success"
-      // });
+      Swal.fire({
+        title: "Success!",
+        text: "Thank you for your message, we'll get back to you!",
+        icon: "success"
+      });
     //   sendEmail();
     console.log('Message Sent');
     
@@ -65,23 +66,19 @@ export const ContactSection = () => {
 
             {/* Popup content */}
             {showPopup && (
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-11 mx-auto bg-black shadow-lg shadow-green-600 rounded-md shadow-outline">
-          <div className="flex justify-center items-center text-center mb-4 z-50 gap-9 relative">
-            <h1 className="font-bold text-green-400">Contact Me</h1>
-
-            <button className="text-red-600 font-bold lg:ml-4 tooltip" onClick={() => setShowPopup(false)}>
-              ❌
-            </button>
-          </div>
-          <p className="text-sm text-ellipsis text-gray-600 mb-4">Let'&copy;s Discuss Your next Project and Bring it to Life😎😍</p>
-          <form className="flex flex-col gap-2" onSubmit={onsubmit}>
-            <input required type="text" name="name" className="border rounded-md p-2 bg-dark-4 lg:w-full sm:w-11/12" placeholder="Enter your name" id="name" />
-            <input required type="email" name="email" className="border rounded-md p-2 bg-dark-4 lg:w-full sm:w-11/12" placeholder="Enter your email" id="email" />
-            <textarea required name="message" className="border rounded-md p-2 bg-dark-4 lg:w-full text-ellipsis sm:w-11/12" placeholder="Your message...." id="message"></textarea>
-            <button type="submit" className="bg-green-400 text-white lg:w-full rounded-md p-2 mt-2 sm:w-11/12">Send {''}{''}</button>
-          </form>
-        </div>
-      )}
+  <div className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center">
+    <div className="bg-white rounded-md p-4 md:p-6 lg:p-8 w-11/12 md:w-2/3 lg:w-1/2 xl:w-1/3 z-50 relative">
+      <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+      <form action="#" className="flex flex-col gap-4" onSubmit={onsubmit}>
+        <input type="email" placeholder="Your email" className="p-2 border rounded-md" required/>
+        <input type="text" placeholder="Subject" className="p-2 border rounded-md" required/>
+        <textarea placeholder="Message" rows={4} className="p-2 border rounded-md" required></textarea>
+        <button type="submit" className="bg-blue-700 text-white p-2 rounded-md hover:bg-blue-800">Send message</button>
+      </form>
+      <button className="text-red-600 font-bold absolute top-4 right-4" onClick={() => setShowPopup(false)}>×</button>
+    </div>
+  </div>
+)}
 
       </div>
       </div>
