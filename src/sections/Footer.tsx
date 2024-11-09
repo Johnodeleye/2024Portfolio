@@ -3,15 +3,15 @@ import Link from 'next/link';
 const footerLinks = [
   {
     title: 'Instagram',
-    link: 'instagram.com/perspicacious.dev',
+    link: 'https://instagram.com/perspicacious.dev',
   },
   {
     title: 'LinkedIn',
-    link: '#',
+    link: 'https://www.linkedin.com/in/thefuturedev',
   },
   {
     title: 'Twitter',
-    link: 'x.com/@pthefuture_',
+    link: 'https://x.com/@pthefuture_',
   },
   {
     title: 'HubPost',

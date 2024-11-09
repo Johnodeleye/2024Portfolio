@@ -22,9 +22,9 @@ const portfolioProjects = [
     image: hubpostbanner,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Perspicacious",
+    year: "2024",
+    title: "Personal Portfolio",
     results: [
       { title: "Boosted sales by 20%" },
       { title: "Expanded customer reach by 35%" },
