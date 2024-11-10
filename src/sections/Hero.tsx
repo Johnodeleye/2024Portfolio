@@ -94,7 +94,7 @@ export const HeroSection = () => {
           <span className='font-semibold cursor-pointer'>Explore My Work</span>
           <ArrowDown className='size-4'/>
         </Link>
-        <Link href={'instagram.com/perspicacious.dev'} className='relative inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-xl cursor-pointer'>
+        <Link href={'https://instagram.com/perspicacious.dev'} className='relative inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-xl cursor-pointer'>
           <span>👋</span>
           <span className='font-semibold'>Let's Connect</span>
         </Link>

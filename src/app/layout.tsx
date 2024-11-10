@@ -11,7 +11,7 @@ const calistoga = Calistoga({
   });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  title: "Odeleye John | Perspicacious",
   description: "The official portfolio of Perspicacious, Founder of HubPost",
 };
 
