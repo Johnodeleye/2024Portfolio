@@ -6,7 +6,8 @@ import CheckCircleIcon from '@/assets/icons/check-circle.svg'
 import ArrowUp from '@/assets/icons/arrow-up-right.svg'
 import grainImage from '@/assets/images/grain.jpg'
 import SectionHeader from "@/components/SectionHeader";
-import church from '@/assets/images/daVID lAND.jpg'
+import church from '@/assets/images/daVID lAND.jpg';
+import behind from '@/assets/images/Behind.jpg'
 import Card from "@/components/Card";
 const portfolioProjects = [
   {
@@ -20,6 +21,18 @@ const portfolioProjects = [
     ],
     link: "https://hubpost-app.vercel.app",
     image: hubpostbanner,
+  },
+  {
+    company: "Bright-Well Properties Ltd",
+    year: "2024",
+    title: "Estate Landing page for Bright-Well Properties Ltd",
+    results: [
+      { title: "Enhanced user experience by 90%" },
+      { title: "Improved site speed by 100%" },
+      { title: "Increased mobile traffic by 45%" },
+    ],
+    link: "https://brightwellproperties.vercel.app",
+    image: behind,
   },
   {
     company: "Perspicacious",
