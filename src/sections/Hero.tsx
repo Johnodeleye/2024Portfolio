@@ -84,9 +84,8 @@ export const HeroSection = () => {
       </div>
 
       <div className='max-w-lg mx-auto'>
-      <h1 className='md:text-5xl font-serif text-3xl text-center mt-8 tracking-wide'>Building Exceptional User Experiences</h1>
-      <p className='mt-4 text-center text-white/60 md:text-lg'>I specialize in transforming designs into functional,
-        high-performing web applications. Let's discuss your next project.
+      <h1 className='md:text-5xl font-serif text-3xl text-center mt-8 tracking-wide'>Hi, I’m Odeleye John, a 16-Year-Old Software Developer & Founder of HubPost Community.</h1>
+      <p className='mt-4 text-center text-white/60 md:text-lg'>Passionate about coding, problem-solving, and creating innovative digital solutions for web and mobile.
       </p>
       </div>
       <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4 relative'>
