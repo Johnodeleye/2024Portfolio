@@ -1,3 +1,4 @@
+import BlogPosts from "@/components/BlogPost";
 import { AboutSection } from "@/sections/About";
 import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
@@ -14,6 +15,7 @@ export default function Home() {
       <HeroSection/>
       <ProjectsSection/>
       <TapeSection/>
+      <BlogPosts/>
       <TestimonialsSection/>
       <AboutSection/>
       <ContactSection/>
