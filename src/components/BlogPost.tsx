@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Card from './Card';  // Adjust the import path to where the Card component is located
+import SectionHeader from './SectionHeader';
 
 interface Post {
   id: string;
@@ -48,7 +49,11 @@ const BlogPosts = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6 text-center">Latest Blog Posts</h1>
+      <SectionHeader 
+        title="Latest Blog Posts" 
+        eyebrow="Check out our latest content" 
+        description="Stay up to date with the newest articles and insights."
+      />
       <ul>
         {posts.map((post) => (
           <li key={post.id} className="mb-6">
@@ -58,9 +63,7 @@ const BlogPosts = () => {
                 <p className="mt-2 text-gray-300">{post.content.slice(0, 100)}...</p> {/* Limit content */}
                 {post.links.length > 0 && (
                   <a
-                    href={post.links[0]}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={`/posts/${post.id}`}  // Navigate to the post detail page
                     className="text-blue-500 mt-2 inline-block"
                   >
                     Read More
