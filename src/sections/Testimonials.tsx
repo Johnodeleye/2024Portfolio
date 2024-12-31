@@ -13,13 +13,13 @@ const testimonials = [
   {
     name: "Focus Kid",
     position: "Founder @ Focus Tech",
-    text: "John was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
+    text: "Perspicacious is instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
     avatar: memojiAvatar1,
   },
   {
-    name: "Odeleye Gbotemi",
-    position: "CEO @ Tomzy Treats",
-    text: "Working with John was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
+    name: "Emmanuel Olalere",
+    position: "CEO @ BrightWell Properties",
+    text: "Working with John was a pleasure. His expertise in web development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
     avatar: memojiAvatar2,
   },
   {
@@ -29,15 +29,15 @@ const testimonials = [
     avatar: memojiAvatar3,
   },
   {
-    name: "Micheal Oluwasegun",
-    position: "Product Manager @ TermTech",
-    text: "John is a true Software developer wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
+    name: "Crowns TV",
+    position: "Director @ Crowns-Tv",
+    text: "John is a true Software developer wizard. He took our complex product and transformed it into an intuitive and engaging user interface & experience. We're already seeing positive feedback from our customers.",
     avatar: memojiAvatar1,
   },
   {
     name: "Tobi Saliu",
     position: "Founder @ Unique Ads Ltd",
-    text: "John's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
+    text: "John's work on our website has been nothing short of exceptional. He's a talented software developer who is also a great communicator. We highly recommend him.",
     avatar: memojiAvatar5,
   },
 ];

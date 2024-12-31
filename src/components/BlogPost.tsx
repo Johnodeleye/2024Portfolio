@@ -30,7 +30,7 @@ const BlogPosts = () => {
       try {
         const response = await fetch('https://hubpost-app.vercel.app/api/authors/johnayomide920@gmail.com');
         if (!response.ok) {
-          throw new Error(`Failed to fetch posts. Status: ${response.status}`);
+          throw new Error('Something went wrong!');
         }
         const data: ApiResponse = await response.json();
         setPosts(data.posts.slice(0, 5)); // Limit to the latest 5 posts
@@ -44,11 +44,11 @@ const BlogPosts = () => {
     fetchPosts();
   }, []);
 
-  if (loading) return <p>Loading posts...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <p className='text-green-500 font-extrabold px-12 text-2xl text-center animate-pulse'>Loading posts...</p>;
+  if (error) return <p className='text-red-500 font-extrabold px-12 text-2xl text-center animate-pulse'>Error: {error}</p>;
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 mb-2 mt-2">
       <SectionHeader 
         title="Latest Blog Posts" 
         eyebrow="Check out our latest content" 

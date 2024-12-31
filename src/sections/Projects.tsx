@@ -13,7 +13,7 @@ const portfolioProjects = [
   {
     company: "HubPost",
     year: "2024",
-    title: "HubPost Social Network Application",
+    title: "HubPost Community",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
@@ -23,7 +23,7 @@ const portfolioProjects = [
     image: hubpostbanner,
   },
   {
-    company: "Bright-Well Properties Ltd",
+    company: "Bright-Well",
     year: "2024",
     title: "Estate Landing page for Bright-Well Properties Ltd",
     results: [
@@ -56,6 +56,18 @@ const portfolioProjects = [
       { title: "Increased mobile traffic by 35%" },
     ],
     link: "https://davidpavilion.onrender.com",
+    image: church,
+  },
+  {
+    company: "Lasvec",
+    year: "2024",
+    title: "Lagos state E-Voting System",
+    results: [
+      { title: "Sign in and Sign-up Functionality" },
+      { title: "Ability to Vote and to be voted for" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://lasvec.vercel.app",
     image: church,
   },
 ];

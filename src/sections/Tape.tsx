@@ -14,6 +14,11 @@ const words = [
   'Usable',
   'Reliable',
   'Advanced',
+  'Authentic',
+  'Authorized',
+  'Biblical',
+  'Communication',
+  'Networking',
 ];
 
 export const TapeSection = () => {
