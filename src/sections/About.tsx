@@ -17,11 +17,38 @@ import { CardHeader } from "@/components/CardHeader";
 import { Toolboxitems } from "@/components/Toolboxitems";
 import {motion} from 'framer-motion';
 import { useRef } from "react";
+import Git from '@/assets/icons/Git (1).svg';
+import TS from '@/assets/icons/TypeScript.svg';
+import PS from '@/assets/icons/Adobe Photoshop.svg';
+import SD from '@/assets/icons/Android Studio.svg';
+import AppWrite from '@/assets/icons/Appwrite.svg';
+import Babel from '@/assets/icons/Babel.svg';
+import Bash from '@/assets/icons/Bash.svg';
+import Canva from '@/assets/icons/Canva.svg';
+import ES from '@/assets/icons/ESLint.svg';
+import EX from '@/assets/icons/Express.svg';
+import JSON from '@/assets/icons/JSON.svg';
+import MONGODB from '@/assets/icons/MongoDB.svg';
+import MGS from '@/assets/icons/Mongoose.js.svg';
+import NPM from '@/assets/icons/NPM.svg';
+import NEXTJS from '@/assets/icons/Next.js.svg';
+import NODE from '@/assets/icons/Node.js.svg';
+import POSTSQL from '@/assets/icons/PostgresSQL.svg';
+import SQL from '@/assets/icons/SQL Developer.svg';
+import TCSS from '@/assets/icons/Tailwind CSS.svg';
+import VERCEL from '@/assets/icons/Vercel.svg';
+import VSCODE from '@/assets/icons/Visual Studio Code (VS Code).svg';
+import VITE from '@/assets/icons/Vite.js.svg';
+
 
 const toolboxItems = [
   {
     title: 'Javascript',
     iconType: <JavascriptIcon/>,
+  },
+  {
+    title: 'TypeScript',
+    iconType: <TS/>,
   },
   {
     title: 'React',
@@ -30,6 +57,10 @@ const toolboxItems = [
   {
     title: 'CSS',
     iconType: <CssIcon/>,
+  },
+  {
+    title: 'Git',
+    iconType: <Git/>,
   },
   {
     title: 'Chrome',
@@ -43,6 +74,86 @@ const toolboxItems = [
   {
     title: 'Html5',
     iconType: <HTMLIcon/>,
+  },
+  {
+    title: 'Photoshop',
+    iconType: <PS/>,
+  },
+  {
+    title: 'Android Studio',
+    iconType: <SD/>,
+  },
+  {
+    title: 'AppWrite',
+    iconType: <AppWrite/>,
+  },
+  {
+    title: 'Babel',
+    iconType: <Babel/>,
+  },
+  {
+    title: 'Bash',
+    iconType: <Bash/>,
+  },
+  {
+    title: 'Canva',
+    iconType: <Canva/>,
+  },
+  {
+    title: 'ESlint',
+    iconType: <ES/>,
+  },
+  {
+    title: 'Json',
+    iconType: <JSON/>,
+  },
+  {
+    title: 'MongoDb',
+    iconType: <MONGODB/>,
+  },
+  {
+    title: 'Mongoose',
+    iconType: <MGS/>,
+  },
+  {
+    title: 'Express',
+    iconType: <EX/>,
+  },
+  {
+    title: 'Npm',
+    iconType: <NPM/>,
+  },
+  {
+    title: 'Next.js',
+    iconType: <NEXTJS/>,
+  },
+  {
+    title: 'Node.js',
+    iconType: <NODE/>,
+  },
+  {
+    title: 'Postgres',
+    iconType: <POSTSQL/>,
+  },
+  {
+    title: 'SQL',
+    iconType: <SQL/>,
+  },
+  {
+    title: 'Tailwind Css',
+    iconType: <TCSS/>,
+  },
+  {
+    title: 'Vercel',
+    iconType: <VERCEL/>,
+  },
+  {
+    title: 'VsCode',
+    iconType: <VSCODE/>,
+  },
+  {
+    title: 'Vite.js',
+    iconType: <VITE/>,
   },
 ]
 
@@ -115,9 +226,9 @@ export const AboutSection = () => {
         {/**Tool box */}
         <Card className="h-[320px] md:col-span-3 lg:col-span-2">
             <CardHeader title="My Toolbox" description="Explore the technologies  and tool I use to craft exceptional digital experiences" className=""/>
-            <Toolboxitems items={toolboxItems} className="" itemsWrapperClassName="animate-move-left [animation-duration:30s]"/>
+            <Toolboxitems items={toolboxItems} className="" itemsWrapperClassName="animate-move-left [animation-duration:40s]"/>
             <Toolboxitems items={toolboxItems} className="mt-6" itemsWrapperClassName="-translate-x-1/2 animate-move-right 
-            [animation-duration:15s]"/>
+            [animation-duration:30s]"/>
         </Card>
         </div>
 

@@ -9,6 +9,8 @@ import SectionHeader from "@/components/SectionHeader";
 import church from '@/assets/images/daVID lAND.jpg';
 import behind from '@/assets/images/Behind.jpg'
 import Card from "@/components/Card";
+import lasvec from '@/assets/images/port image.jpg';
+import ikoko from '@/assets/images/Ikoko page.jpg';
 const portfolioProjects = [
   {
     company: "HubPost",
@@ -64,11 +66,23 @@ const portfolioProjects = [
     title: "Lagos state E-Voting System",
     results: [
       { title: "Sign in and Sign-up Functionality" },
-      { title: "Ability to Vote and to be voted for" },
+      { title: "Ability to Vote" },
       { title: "Increased mobile traffic by 35%" },
     ],
     link: "https://lasvec.vercel.app",
-    image: church,
+    image: lasvec,
+  },
+  {
+    company: "Specail Force",
+    year: "2024",
+    title: "Ikoko Special Force",
+    results: [
+      { title: "Improved site speed by 50%" },
+      { title: "Contact feature" },
+      { title: "Blogs Post" },
+    ],
+    link: "https://ikokospecialforce.vercel.app/",
+    image: ikoko,
   },
 ];
 
