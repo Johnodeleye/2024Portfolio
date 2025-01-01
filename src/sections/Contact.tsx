@@ -1,132 +1,122 @@
 'use client';
-import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
-import grainImage from '@/assets/images/grain.jpg';
+
+import { CircleX, Cross, CrossIcon, EyeClosed } from 'lucide-react';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
+
 export const ContactSection = () => {
-
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handlePopupClick = () => {
-    setShowPopup(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [send, setSend] = useState('Send Message')
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
   };
 
-  const onSubmit = async (event:any) => {
+  const onSubmit = async (event: any) => {
     event.preventDefault();
+    setSend("Sending...");
+    
     const formData = new FormData(event.target);
-
+  
     formData.append("access_key", "8d4a9798-6b50-4e7e-b2d6-55108dd78b15");
-
+  
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
-
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: json
-    }).then((res) => res.json());
-
-    if (res.success) {
-      // console.log("Success", res);
+  
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      }).then((res) => res.json());
+  
+      if (res.success) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Thank you!',
+          text: 'Your message has been sent successfully.',
+          showConfirmButton: true,
+        });
+        event.target.reset();
+        setSend("Send Message"); // Reset the button text
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops!',
+          text: 'Something went wrong. Please try again later.',
+        });
+        setSend("Send Message"); // Reset the button text
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
       Swal.fire({
-        icon:'success',
-        title: 'Thank you!',
-        text: 'Your message has been sent successfully.',
-        showConfirmButton: true,
+        icon: 'error',
+        title: 'Network Error',
+        text: 'Unable to send the message. Please check your connection.',
       });
-      event.target.reset();
+      setSend("Send Message"); // Reset the button text
     }
   };
+  
+  
 
   return (
-  <div className='py-16 pt-12 lg:py-24 lg:pt-20'>
-    <div className='container'> {/**The container makes it comes to the center of the screen */}
-    <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 
-    px-10 rounded-3xl text-center relative overflow-hidden z-0 md:text-left">
-      <div className="absolute inset-0 opacity-5 -z-10" style={{
-        backgroundImage: `url(${grainImage.src})`
-        }}></div>
-        <div className="flex flex-col gap-8 md:gap-16 items-center md:flex-row">
-          <div>
-    <h2 className='font-serif text-2xl md:text-3xl'>Let's create something amazing together</h2>
-    <p className='text-sm mt-2 md:text-base'>
-      Ready to bring your next project to life? Let's connect and 
-      discuss how i can help you achieve your goals.
-    </p>
-    </div>
-    <div>
-    <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border-gray-950" onClick={handlePopupClick}>
-      <span className='font-semibold'>Contact Me</span>
-      <ArrowUpRightIcon className='size-4'/>
+    <div className="py-16 text-center">
+      <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
+      <p className="text-gray-600 mb-8 px-4">
+        Have questions or want to collaborate? Fill out the form, and I’ll get back to you!
+      </p>
+      <button
+        className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
+        onClick={toggleModal}
+      >
+        Contact Me
       </button>
 
-            {/* Popup content */}
-            {showPopup && (
-  <div className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center">
-    <div className="bg-white rounded-md p-4 md:p-6 lg:p-8 w-11/12 md:w-2/3 lg:w-1/2 xl:w-1/3 z-50 relative">
-      <h2 className="text-2xl font-bold mb-4">Contact Form</h2>
-      <form onSubmit={onSubmit} className="flex flex-col gap-4">
-        <input type="email" placeholder="Your email" className="p-2 border rounded-md" required name='email'/>
-        <input type="text" placeholder="Your name" className="p-2 border rounded-md" required name='Name'/>
-        <textarea placeholder="Message" rows={4} className="p-2 border rounded-md" required name='message'></textarea>
-        <button type="submit" className="bg-blue-700 text-white p-2 rounded-md hover:bg-blue-800">Send message</button>
-      </form>
-      <button className="text-red-600 font-bold absolute top-4 right-4" onClick={() => setShowPopup(false)}>×</button>
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-11/12 md:w-1/2 lg:w-1/3">
+            <button
+              className="text-red-600 absolute top-4 right-4 text-xl font-bold"
+              onClick={toggleModal}
+            >
+              <CircleX color='red'/>
+            </button>
+            <h3 className="text-xl font-bold mb-4 text-blue-500">Contact Form</h3>
+            <form onSubmit={onSubmit} className="space-y-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="w-full p-3 border rounded-lg text-black"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                className="w-full p-3 border rounded-lg text-black"
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                required
+                rows={4}
+                className="w-full p-3 border rounded-lg text-blue-500 font-sans"
+              ></textarea>
+              <button
+                type="submit"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition w-full"
+              >
+                {send}
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
-  </div>
-)}
-
-      </div>
-      </div>
-      </div>
-    </div>
-  </div>
   );
 };
-
-// 'use client'
-// import React from "react";
-
-// export const ContactSection = () => {
-//   const onSubmit = async (event:any) => {
-//     event.preventDefault();
-//     const formData = new FormData(event.target);
-
-//     formData.append("access_key", "8d4a9798-6b50-4e7e-b2d6-55108dd78b15");
-
-//     const object = Object.fromEntries(formData);
-//     const json = JSON.stringify(object);
-
-//     const res = await fetch("https://api.web3forms.com/submit", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//         Accept: "application/json"
-//       },
-//       body: json
-//     }).then((res) => res.json());
-
-//     if (res.success) {
-//       console.log("Success", res);
-//     }
-//   };
-
-//   return (
-//       <form onSubmit={onSubmit} className="flex flex-col gap-4">
-//          <input type="email" placeholder="Your email" className="p-2 border rounded-md" required/>
-//          <input type="text" placeholder="Subject" className="p-2 border rounded-md" required/>
-//         <textarea name="message"></textarea>
-//         <button type="submit">Submit Form</button>
-//       </form>
-
-// // <form onSubmit={onSubmit} >
-// //
-// // 
-// // <textarea placeholder="Message" rows={4} className="p-2 border rounded-md" required></textarea>
-// // <button type="submit" className="bg-blue-700 text-white p-2 rounded-md hover:bg-blue-800">Send message</button>
-// // </form>
-//   );
-// }

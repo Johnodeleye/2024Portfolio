@@ -209,24 +209,28 @@ export const Brief = () => {
     <div className="py-20 lg:py-28" id='brief'>
       <div className="container">
       <SectionHeader 
-      eyebrow="My Profile"
-      title="A Glimps Into My World!"
-      description="Learn More about who I am, what I do, and what inspires me."
-      />
+  eyebrow="About Me"
+  title="Discover My Passion and Purpose"
+  description="Explore my journey, skills, and the impact I aim to create through technology."
+/>
 
-      <div className="mt-20 flex flex-col gap-8">
+<div className="mt-20 flex flex-col gap-8">
+  <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:grid-cols-3">
+  
+  <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
+  <CardHeader 
+    title="Who I Am" 
+    description="🌟 Hello, I’m Ayomide John Perspicacious! 🌟
+    I am a passionate Full-Stack Developer, Mobile Developer, and Tech Creator from Nigeria 🇳🇬. With expertise in React, Next.js, TailwindCSS, TypeScript, and back-end tools like Node.js and databases, I craft dynamic web and mobile applications 🌐📱.
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:grid-cols-3">
+    As the Founder of HubPost Community, I connect and inspire developers, designers, and tech enthusiasts globally 🌟. I thrive on building impactful solutions, sharing knowledge, and driving innovation 🚀.
 
-        {/**About */}
-        <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
-        <CardHeader title="Beyond the Code" description="🌟 Hello, I’m Ayomide John Perspicacious! 🌟
-        I am a passionate Full-Stack Developer, Mobile Developer, and Tech Creator from Nigeria 🇳🇬. With expertise in React, Next.js, TailwindCSS, TypeScript, and back-end tools like Node.js and databases, I craft dynamic web and mobile applications 🌐📱.
+    Let’s create a brighter, tech-driven future together! 🌍" 
+    className="px-6 py-6 lg:text-left lg:max-w-none"
+  />
+</Card>
 
-        As the Founder of HubPost Community, I connect and inspire developers, designers, and tech enthusiasts globally 🌟. I thrive on building impactful solutions, sharing knowledge, and driving innovation 🚀.
 
-        Let’s create a brighter, tech-driven future together! 🌍" className="px-6 py-6"/>
-        </Card>
 
         {/**Map */}
         <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
