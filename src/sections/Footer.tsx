@@ -1,5 +1,3 @@
-'use client';
-
 import { Instagram, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -63,6 +61,9 @@ export const Footer = () => {
             ))}
           </nav>
         </div>
+
+        {/* Horizontal Line */}
+        <hr className="my-8 border-gray-600 w-full" />
 
         {/* Decorative Background */}
         <div className="mt-8 h-[200px] bg-emerald-300/20 rounded-full blur-[100px] mx-auto w-3/4"></div>
