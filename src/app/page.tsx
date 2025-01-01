@@ -1,4 +1,5 @@
 import BlogPosts from "@/components/BlogPost";
+import { Brief } from "@/components/Brief";
 import { AboutSection } from "@/sections/About";
 import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
@@ -18,6 +19,7 @@ export default function Home() {
       <BlogPosts/>
       <TestimonialsSection/>
       <AboutSection/>
+      <Brief/>
       <ContactSection/>
       {/* <HubPostSection/> */}
       <Footer/>
