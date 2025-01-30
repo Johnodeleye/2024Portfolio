@@ -51,3 +51,59 @@ Learn how to manage state with `useState` and handle side effects with `useEffec
 Don't forget to like, share, and subscribe for more coding tips and tutorials! 
 
 #React #JavaScript #WebDevelopment #Coding #useState #useEffect #Shorts #Programming #
+
+
+
+
+
+
+
+
+Absolutely! Here’s a revised script that includes a practical snippet you can show while talking. This will help viewers visualize what you’re explaining.
+
+### Title:
+"TypeScript with React: A Beginner's Guide! 🚀"
+
+### Video Script (30 seconds):
+"Hey everyone! 👋 Today, I’ll show you how to use TypeScript with React!
+
+TypeScript helps you catch errors in your code. 🛠️ Let’s start by installing TypeScript in your React project.
+
+[Switch to your code editor]
+
+Here’s a simple component. Notice how I add types to the props. For example, I’ll define a `name` prop as a string.
+
+```typescript
+interface GreetingProps {
+name: string;
+}
+
+const Greeting: React.FC<GreetingProps> = ({ name }) => {
+return <h1>Hello, {name}!</h1>;
+};
+```
+
+This makes your code safer and easier to understand!
+
+That’s it! Like and subscribe for more tips! 👍"
+
+### Description:
+"🚀 TypeScript with React: A Beginner's Guide! 🚀
+
+In this quick video, learn how to use TypeScript in your React projects! TypeScript helps you write safer code by catching errors early. Perfect for beginners!
+
+👉 Like and subscribe for more tips!
+
+#TypeScript #React #WebDevelopment #Coding #Programming #JavaScript"
+
+### Keywords:
+- TypeScript
+- React
+- Beginner Guide
+- Web Development
+- JavaScript
+
+### Hashtags:
+#TypeScript #React #WebDevelopment #Coding #Programming
+
+This script includes a practical code snippet that you can show while explaining, making it more engaging for your viewers. Let me know

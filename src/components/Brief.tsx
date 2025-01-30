@@ -220,13 +220,11 @@ export const Brief = () => {
   <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
   <CardHeader 
     title="Who I Am" 
-    description="🌟 Hello, I’m Ayomide John Perspicacious! 🌟
-    I am a passionate Full-Stack Developer, Mobile Developer, and Tech Creator from Nigeria 🇳🇬. With expertise in React, Next.js, TailwindCSS, TypeScript, and back-end tools like Node.js and databases, I craft dynamic web and mobile applications 🌐📱.
-
-    As the Founder of HubPost Community, I connect and inspire developers, designers, and tech enthusiasts globally 🌟. I thrive on building impactful solutions, sharing knowledge, and driving innovation 🚀.
+    description="🌟 Odeleye John Ayomide also known as  Perspicacious (P.Dev🔥❤)🌟
+    He is a passionate Full-Stack Developer, Mobile Developer, and Tech Creator from Nigeria 🇳🇬. With expertise in React, Next.js, TailwindCSS, TypeScript, React-Native and back-end tools like Node.js and databases, I craft dynamic web and mobile applications 🌐📱.`John is the  Founder of HubPost Community He connects and inspire developers, designers, and tech enthusiasts globally 🌟. He thrives on building impactful solutions, sharing knowledge, and driving innovation 🚀.
 
     Let’s create a brighter, tech-driven future together! 🌍" 
-    className="px-6 py-6 lg:text-left lg:max-w-none"
+    className="px-6 py-6 lg:text-left lg:max-w-none w-full"
   />
 </Card>
 
