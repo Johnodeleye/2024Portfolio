@@ -1,4 +1,5 @@
 import hubpostbanner from "@/assets/images/Hubpostbanner.jpg";
+import hub from "@/assets/images/hub.jpg";
 import porthome from "@/assets/images/porthome.jpg";
 import Todo from "@/assets/images/Todo.jpg";
 import Image from "next/image";
@@ -23,6 +24,18 @@ const portfolioProjects = [
     ],
     link: "https://hubpost-app.vercel.app",
     image: hubpostbanner,
+  },
+  {
+    company: "HubPost MVP 2 ",
+    year: "2025",
+    title: "HubPost Community",
+    results: [
+      { title: "STILL IN PROGRESS" },
+      { title: "STILL IN DEVELOPMENT" },
+      { title: "BUT YOU CAN CLICK THE LINK BELOW TO CHECK IT" },
+    ],
+    link: "https://hubpost-community.vercel.app",
+    image: hub,
   },
   {
     company: "Bright-Well",

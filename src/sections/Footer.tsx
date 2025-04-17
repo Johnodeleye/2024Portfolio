@@ -15,8 +15,8 @@ const footerLinks = [
     icon: <Linkedin size={20} />,
   },
   {
-    title: 'Twitter',
-    link: 'https://x.com/@pthefuture_',
+    title: 'Tiktok',
+    link: 'https://tiktok.com/@perspicacious.dev',
     icon: <Twitter size={20} />,
   },
   {
@@ -42,7 +42,7 @@ export const Footer = () => {
           {/* Logo or Brand Name */}
           <div className="text-center md:text-left">
             <h2 className="text-lg font-bold">Perspicacious.Dev</h2>
-            <p className="text-sm text-gray-400">&copy; 2024 All Rights Reserved</p>
+            <p className="text-sm text-gray-400">&copy; 2025 All Rights Reserved</p>
           </div>
 
           {/* Navigation Links */}
