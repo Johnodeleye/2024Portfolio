@@ -25,7 +25,7 @@ const footerLinks = [
     icon: (
       <Image
         src={hubpost}
-        alt="HubPost Logo"
+        alt="HubPost Logo 2"
         width={20}
         height={20}
         className="rounded-sm"
