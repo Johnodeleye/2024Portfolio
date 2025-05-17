@@ -34,7 +34,7 @@ const portfolioProjects = [
       { title: "STILL IN DEVELOPMENT" },
       { title: "BUT YOU CAN CLICK THE LINK BELOW TO CHECK IT" },
     ],
-    link: "https://hubpost-community.vercel.app",
+    link: "https://www.whatsapp.com/channel/0029Vb5LuDfKwqSP1bOzaG0U",
     image: hub,
   },
   {
